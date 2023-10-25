@@ -1,5 +1,22 @@
 {
-  "profile": {
-    "name": "typicode"
-  }
+  "profile": [
+    {
+      "id": 1,
+      "name": "Anburaj",
+      "email": "anbu@gmail.com",
+      "password": "Anbu@123"
+    },
+    {
+      "name": "Raja",
+      "email": "raja123@gmail.com",
+      "password": "raja@123",
+      "id": 2
+    },
+    {
+      "name": "Dinesh",
+      "email": "dinesh@gmail.com",
+      "passsword": "dinesh123",
+      "id": 3
+    }
+  ]
 }

@@ -24,4 +24,5 @@ const DIV=styled.div`
     width: 100%;
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(176,229,208,1) 42%, rgba(92,202,238,0.41) 93.6% );
     font-size: 20px;
+    font-weight: bold;
 `
