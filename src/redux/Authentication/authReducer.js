@@ -1,4 +1,4 @@
-import { FAILURE, REGISTER_SUCCESS, REQUEST } from "./actionTypes"
+import { FAILURE, LOGIN_SUCCESS, REGISTER_SUCCESS, REQUEST } from "./actionTypes"
 
 const initState={
     isAuth:false,
@@ -12,6 +12,9 @@ export const authReducer=(state=initState,{type,payload})=>{
         }
         case REGISTER_SUCCESS:{
             return{...state,userName:payload.name,isAuth:true}
+        }
+        case LOGIN_SUCCESS:{
+            return{...state,userName:payload,isAuth:true}
         }
         case FAILURE:{
             return{...state,isAuth:false}

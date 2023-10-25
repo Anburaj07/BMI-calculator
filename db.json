@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Anburaj",
       "email": "anbu@gmail.com",
-      "password": "Anbu@123"
+      "password": "anbu2203"
     },
     {
       "name": "Raja",
@@ -17,6 +17,12 @@
       "email": "dinesh@gmail.com",
       "passsword": "dinesh123",
       "id": 3
+    },
+    {
+      "name": "Virat",
+      "email": "virat@gmail.com",
+      "passsword": "virat@123",
+      "id": 4
     }
   ]
 }

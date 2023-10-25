@@ -1,7 +1,7 @@
 import { FormControl, FormLabel, Heading, Input } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { register } from "../redux/Authentication/action";
 
@@ -12,6 +12,7 @@ const Registeration = () => {
   const [passsword, setPassword] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const location=useLocation();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,7 +23,7 @@ const Registeration = () => {
     };
     dispatch(register(obj))
       .then(() => {
-        navigate("/");
+        navigate(location.state,{replace:true});
       })
       .catch((err) => {
         console.log(err);
@@ -36,21 +37,21 @@ const Registeration = () => {
         <FormControl>
           <FormLabel>Name</FormLabel>
           <Input
-            _placeholder="Enter your name"
+            placeholder="Enter your name"
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
           <FormLabel>Email</FormLabel>
           <Input
-            _placeholder="Enter your email"
+            placeholder="Enter your email"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <FormLabel>Password</FormLabel>
           <Input
-            _placeholder="Enter your password"
+            placeholder="Enter your password"
             type="password"
             value={passsword}
             onChange={(e) => setPassword(e.target.value)}
